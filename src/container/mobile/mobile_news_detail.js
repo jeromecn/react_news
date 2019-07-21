@@ -3,7 +3,7 @@ import {Row, Col} from 'antd';
 import MobileHeader from '../../component/mobile/header/mobile_header';
 import MobileFooter from '../../component/mobile/footer/mobile_footer';
 import Comment from '../../component/common/common_comment';
-import 'mobile_news_detail.css'
+import './mobile_news_detail.css'
 
 export default class MobileNewsDetail extends React.Component {
     constructor() {
