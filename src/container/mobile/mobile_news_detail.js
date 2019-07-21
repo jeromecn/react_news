@@ -33,6 +33,9 @@ export default class MobileNewsDetail extends React.Component {
         return (
 
             <div>
+                <style type="text/css">
+                    body img{width: 100%;}
+                </style>
                 <Row style={{marginTop:'1em'}}>
                     <Col span={1}>
                     </Col>
