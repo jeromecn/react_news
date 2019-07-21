@@ -3,6 +3,7 @@ import {Row, Col} from 'antd';
 import MobileHeader from '../../component/mobile/header/mobile_header';
 import MobileFooter from '../../component/mobile/footer/mobile_footer';
 import Comment from '../../component/common/common_comment';
+import 'mobile_news_detail.css'
 
 export default class MobileNewsDetail extends React.Component {
     constructor() {
@@ -33,9 +34,7 @@ export default class MobileNewsDetail extends React.Component {
         return (
 
             <div>
-                <style type="text/css">
-                    body img{width: 100%;}
-                </style>
+
                 <Row style={{marginTop:'1em'}}>
                     <Col span={1}>
                     </Col>
