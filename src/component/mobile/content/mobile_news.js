@@ -19,7 +19,7 @@ export default class MobileNews extends React.Component {
         let fetchOption = {method: 'GET', mode: "cors",};
         fetch("http://192.168.1.164:10239/api/homelist?a=0&c=world&i=10&n=com.xxx.xxx&s=30&g=b00a4c56e9a72483f2c448a7c2325f1f", fetchOption)
             .then(response => response.json())
-            .then(json => this.setState({news: json.data[0]}));
+            .then(json => this.setState({news: json.data}));
     }
 
     //加载更多方法
