@@ -7,7 +7,7 @@ export default class MobileNewsComponent extends React.Component{
     render(){
 
         const newlist=this.props.news.map((newsItem, index) => (
-            <Link to={`${newsItem.link}`} target='_blank' key={index}>
+            <Link to={`details/${newsItem.title}`} target='_blank' key={index}>
                <section  className='mob_news_sec'>
 
                     <div style={{width:this.props.ImageWidth}}>
