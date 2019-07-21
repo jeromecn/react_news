@@ -14,7 +14,8 @@ export default class MobileNewsDetail extends React.Component {
 
     componentDidMount() {
         let fetchOption = {
-            method: 'GET'
+            method: 'GET',
+            mode: "cors",
         };
         fetch("http://192.168.1.164:10239/api/detail?k=" + this.props.params.uniquekey, fetchOption)
             .then(response => response.json())
