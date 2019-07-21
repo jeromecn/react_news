@@ -16,10 +16,10 @@ export default class MobileNews extends React.Component {
 
 
     componentDidMount() {
-        let fetchOption = {method: 'GET'};
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnews&type=" + this.props.type + "&count=" + this.state.count, fetchOption)
+        let fetchOption = {method: 'GET', mode: "cors",};
+        fetch("http://192.168.1.164:10239/api/homelist?a=0&c=world&i=10&n=com.xxx.xxx&s=30&g=b00a4c56e9a72483f2c448a7c2325f1f", fetchOption)
             .then(response => response.json())
-            .then(json => this.setState({news: json}));
+            .then(json => this.setState({news: json.data[0]}));
     }
 
     //加载更多方法
