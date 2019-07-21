@@ -36,7 +36,7 @@ export default class MobileNewsDetail extends React.Component {
             <div>
 
                 <Row style={{marginTop:'1em'}}>
-                    <Col span={1}>
+                    <Col span={22}>
                         <h1>
                             {this.state.newsItem.title}
                         </h1>
