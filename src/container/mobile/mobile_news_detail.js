@@ -16,16 +16,16 @@ export default class MobileNewsDetail extends React.Component {
         let fetchOption = {
             method: 'GET'
         };
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getnewsitem&uniquekey=" + this.props.params.uniquekey, fetchOption)
+        fetch("http://192.168.1.164:10239/api/detail?k=" + this.props.params.uniquekey, fetchOption)
             .then(response => response.json())
             .then(json => {
-                this.setState({newsItem: json});
+                this.setState({newsItem: json.data[0]});
                 document.title = this.state.newsItem.title + "-新闻头条";
             });
     }
 
     createMarkup() {
-        return {__html: this.state.newsItem.pagecontent};
+        return {__html: this.state.newsItem.content};
     }
 
     render() {
@@ -37,7 +37,7 @@ export default class MobileNewsDetail extends React.Component {
                     <Col span={1}/>
                     <Col span={22}>
                         <div dangerouslySetInnerHTML={this.createMarkup()}/>
-                        <Comment uniquekey={this.props.params.uniquekey}/>
+                        {/*<Comment uniquekey={this.props.params.uniquekey}/>*/}
                     </Col>
                     <Col span={1}/>
                 </Row>
