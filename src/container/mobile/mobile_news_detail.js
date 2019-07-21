@@ -37,6 +37,9 @@ export default class MobileNewsDetail extends React.Component {
                     <Col span={1}>
                     </Col>
                     <Col span={22}>
+                        <div>
+                            <img src={this.state.newsItem.img} />
+                        </div>
                         <div dangerouslySetInnerHTML={this.createMarkup()}/>
                     </Col>
                     <Col span={1}/>
