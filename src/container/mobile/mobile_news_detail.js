@@ -21,7 +21,7 @@ export default class MobileNewsDetail extends React.Component {
             .then(response => response.json())
             .then(json => {
                 this.setState({newsItem: json.data[0]});
-                document.title = this.state.newsItem.title + "-新闻头条";
+                document.title = this.state.newsItem.title;
             });
     }
 
@@ -33,16 +33,14 @@ export default class MobileNewsDetail extends React.Component {
         return (
 
             <div>
-                <MobileHeader/>
                 <Row style={{marginTop:'1em'}}>
-                    <Col span={1}/>
+                    <Col span={1}>
+                    </Col>
                     <Col span={22}>
                         <div dangerouslySetInnerHTML={this.createMarkup()}/>
-                        {/*<Comment uniquekey={this.props.params.uniquekey}/>*/}
                     </Col>
                     <Col span={1}/>
                 </Row>
-                <MobileFooter/>
             </div>
 
         );
